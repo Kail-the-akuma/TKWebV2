@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root
+{
+    --font-family: 'Poppins', sans-serif;
+
+    /*Color Presets */
+
+    --gradient-text:  linear-gradient(90deg, #FFD369 0%, #FF8A71 100%);
+    --gradient-bar: linear-gradient(103.22deg, hsla(42, 100%, 71%, 1) -13.86%,hsla(11, 100%, 72%, 1) 99.55%);
+
+    --color-bg: #222831;
+    --color-footer : #393E46;
+   
+    --color-primary : #FFD369;
+    --color-secondary: #FF8A71;
+    
+    --color-blog: #042c54;
+    --color-text: #EEEEEE;
+    --color-white: #ffff;
+
+
+    --transition: all 400ms ease;
+
+    /*container width adjustments*/
+    --container-width-lg:75%;
+    --container-widht-md:86%;
+    --container-width-sm:90%
+}
