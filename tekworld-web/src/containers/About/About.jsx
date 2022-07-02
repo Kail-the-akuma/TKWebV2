@@ -6,8 +6,9 @@ const About = () => {
   return (
     <div className='about section_margin' id="About">
       <div className='about-feature'>
-      <Feature />
-
+      <Feature 
+        title="Quem Somos" 
+        text= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam laudantium atque voluptate amet? '/> 
       </div>
 
       <div className='about-heading'>
@@ -16,9 +17,15 @@ const About = () => {
       </div>
 
       <div className='about-container'>
-      <Feature/>
-      <Feature/>
-      <Feature/>
+        <Feature
+         title="Quem Somos" 
+         text= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam laudantium atque voluptate amet? '/>
+        <Feature      
+          title="Quem Somos" 
+          text= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam laudantium atque voluptate amet? '/> 
+        <Feature      
+          title="Quem Somos" 
+          text= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam laudantium atque voluptate amet? '/> 
       </div>
 
     </div>

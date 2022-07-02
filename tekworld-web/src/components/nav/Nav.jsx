@@ -1,72 +1,44 @@
 import React from 'react'
+import './nav.css'
+import {FaHome} from 'react-icons/fa'
+import {FaUserCircle} from 'react-icons/fa'
+import {ImBooks} from 'react-icons/im'
+import {FiPenTool} from 'react-icons/fi'
+import {GiConsoleController} from 'react-icons/gi'
+import {BiMessageDetail} from 'react-icons/bi'
 import { useState } from 'react'
 
-import './nav.css'
-
-import {RiMenu3Line, RiCloseLine} from 'react-icons/ri'
-import {BsFacebook} from 'react-icons/bs'
-
-import {FaLinkedin} from 'react-icons/fa'
-import {FaFacebookMessenger} from 'react-icons/fa'
-
-import Logo from '../../assets/Logo.png'
-
-/*============== RETURN MENU LINKS ===============*/
-const Menu = () =>(
-  <>
-  <p><a href='Home'> Home</a></p>
-  <p><a href='About'> Quem Somos</a></p>
-  <p><a href='Projects'> Os Nossos Projetos</a></p>
-  <p><a href='Blog'> Blog</a></p>
-  <p><a href='Contacts'> Contactos</a></p>
-  </>
-)
-
-const Socials = () =>(
-  <>
-    <p><a href='https://www.facebook.com/tktekworld' target='_blank'><BsFacebook/></a></p>
-    <p><a href='https://www.linkedin.com/company/tk-tekworld' target='_blank'><FaLinkedin/></a></p>
-    <p><a href='https://m.me/tktekworld/'  target='_blank'><FaFacebookMessenger/></a></p>
-  </>
-)
-
 const Nav = () => {
-  const[toggleMenu, setToggleMenu] = useState(false);
-
+  const [activeNav, setActiveNav] = useState('#')
   return (
-    <div className='navbar'>
-      <div className='navbar-links'>
-        <div className='navbar-links_logo'>
-          <img src={Logo} alt='logo'/>
-        </div>
-        <div className='navbar-links_container'>
-          <Menu/>
-        </div>
-      </div>
-      <div className='navbar-socials'>
-        <Socials/>
-      </div>
-     
-      {/*======================MOBILE MENU=======================*/}
-      {/*==Activate/Deactivate==*/}
-      <div className='navbar-menu'>
-        {toggleMenu 
-          ? <RiCloseLine color='#fff' size={27} onClick={() => setToggleMenu(false)}/>
-          : <RiMenu3Line color='#fff' size={27} onClick={() => setToggleMenu(true)}/>
-        }
-        {/*==Display Content==*/}
-        {toggleMenu &&(
-          <div className='navbar-menu_container scale-up-center'>
-            <div className='navbar-menu_container-links'>
-              <Menu/>
-            </div>
-            <div className='navbar-menu_container-socials'>
-              <Socials/>
-            </div>
-          </div>
-        )}
-      </div>
+    <div className='FullScreenNav'>
+    <nav>
+      <a href="#" className={activeNav === '#' ? 'active' : ''}>
+        <FaHome/>
+      </a>
+      <a href="#About" onClick={() => setActiveNav('#About')}
+      className={activeNav === '#About' ? 'active' : ''}>
+        <FaUserCircle/>
+        </a>
+      <a href="#Experience" onClick={() => setActiveNav('#Experience')}
+      className={activeNav === '#Experience' ? 'active' : ''}>
+        <ImBooks/>
+      </a>
+      <a href="#Services" onClick={() => setActiveNav('#Services')}
+      className={activeNav === '#Services' ? 'active' : ''}>
+        <FiPenTool/>
+      </a>
+      <a href="#Portfolio"onClick={() => setActiveNav('#Portfolio')}
+      className={activeNav === '#Portfolio' ? 'active' : ''}>
+        <GiConsoleController/>
+        </a>
+      <a href="#Contacts" onClick={() => setActiveNav('#Contacts')}
+      className={activeNav === '#Contacts' ? 'active' : ''}>
+        <BiMessageDetail/>
+      </a>
+    </nav>
     </div>
+
   )
 }
 

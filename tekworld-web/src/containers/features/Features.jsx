@@ -3,7 +3,7 @@ import './features.css'
 
 const Features = () => {
   return (
-    <div>Features</div>
+    <div className='features section_padding'>Features</div>
   )
 }
 
